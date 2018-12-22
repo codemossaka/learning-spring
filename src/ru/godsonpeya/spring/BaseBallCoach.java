@@ -1,10 +1,10 @@
 package ru.godsonpeya.spring;
 
-public class BaseBallCoatch implements Coatch{
+public class BaseBallCoach implements Coach{
 
 	private FortuneService fortuneService;
 	
-	public BaseBallCoatch(FortuneService theFortuneService) {
+	public BaseBallCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
 	@Override

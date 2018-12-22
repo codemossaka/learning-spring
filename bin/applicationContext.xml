@@ -7,10 +7,16 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- <context:component-scan base-package="com.in28minutes.spring.basics"/> -->
+	<context:property-placeholder location="classpath:sport.properties"/>
 
 	<bean id="myFortuneService" class="ru.godsonpeya.spring.HappyForTuneService">
 	</bean>
-	<bean id="myCoatch" class="ru.godsonpeya.spring.TrackCoatch">
+	<bean id="myCrickedCoach" class="ru.godsonpeya.spring.CrickedCoach">
+		<property name="fortuneService" ref="myFortuneService"/>
+		<property name="emailAdress" value="${foo.email}"/>
+		<property name="team" value="${foo.team}" />
+	</bean>
+	<bean id="myCoach" class="ru.godsonpeya.spring.TrackCoach">
 		<constructor-arg ref="myFortuneService"/>
 	</bean>
 

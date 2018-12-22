@@ -7,10 +7,10 @@ public class HelloSpringApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coatch theCoatch = context.getBean("myCoatch", Coatch.class);
+		Coach theCoatch = context.getBean("myCoach", Coach.class);
 		System.out.println(theCoatch.getDailyWorkout());
 		System.out.println(theCoatch.getDailyFortune());
-		
+	
 		context.close();
 	}
 

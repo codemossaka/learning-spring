@@ -1,11 +1,11 @@
 package ru.godsonpeya.spring;
 
-public class TrackCoatch implements Coatch {
+public class TrackCoach implements Coach {
 	private FortuneService fortuneService;
 	
-	public TrackCoatch() {
+	public TrackCoach() {
 	}
-	public TrackCoatch(FortuneService theFortuneService) {
+	public TrackCoach(FortuneService theFortuneService) {
 		this.fortuneService = theFortuneService;
 	}
 
